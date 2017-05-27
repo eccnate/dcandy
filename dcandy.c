@@ -11,6 +11,9 @@ typedef unsigned double b8_t;
 // See fcserver.cpp/FCServer::mainLoop()
 void main_loop();
 
+// See tcpnetserver.cpp/TcpNetServer::start()
+void start_listening();
+
 void main_loop()
 {
 	// Indefinite loop
@@ -26,6 +29,12 @@ void main_loop()
 
 		}
 	}
+	return;
+}
+
+void start_listening()
+{
+	// Handle TCP communications
 	return;
 }
 
