@@ -1,9 +1,12 @@
 /* dcandy.c */
 
-typedef unsigned char   	b1_t;
-typedef unsigned short  	b2_t;
-typedef unsigned int    	b4_t;
-typedef unsigned long long	b8_t;
+#include <stdint.h>
+
+
+typedef unsigned uint_least8_t   	b1_t;
+typedef unsigned uint_least16_t  	b2_t;
+typedef unsigned uint_least32_t    	b4_t;
+typedef unsigned uint_least64_t		b8_t;
 
 enum {	SUCCESS = 0 ,
 	FAILURE = 1
@@ -39,7 +42,7 @@ void start_listening()
 	return;
 }
 
-int main()
+int main(int argc, char** argv)
 {
 	// Initialize libusb context/struct
 	
