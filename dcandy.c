@@ -1,12 +1,13 @@
 /* dcandy.c */
 
-typedef unsigned char   b1_t;
-typedef unsigned short  b2_t;
-typedef unsigned int    b4_t;
-typedef unsigned double b8_t;
+typedef unsigned char   	b1_t;
+typedef unsigned short  	b2_t;
+typedef unsigned int    	b4_t;
+typedef unsigned long long	b8_t;
 
-#define SUCCESS 0
-#define FAILURE 1
+enum {	SUCCESS = 0 ,
+	FAILURE = 1
+     };
 
 // See fcserver.cpp/FCServer::mainLoop()
 void main_loop();
@@ -17,7 +18,7 @@ void start_listening();
 void main_loop()
 {
 	// Indefinite loop
-	for (;;)
+	while(1)
 	{
 		// Loop through connected USB devices and flush their communication 
 		// streams.
